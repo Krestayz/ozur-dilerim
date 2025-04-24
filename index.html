@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Özür Dilerim Zehram</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+      background-color: #fce4ec;
+    }
+
+    #yesButton, #noButton {
+      font-size: 20px;
+      padding: 10px 30px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yesButton {
+      background-color: #81c784;
+      color: white;
+    }
+
+    #noButton {
+      background-color: #e57373;
+      color: white;
+      position: absolute;
+    }
+
+    #message {
+      font-size: 24px;
+      color: #d81b60;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Beni affeder misin?</h1>
+  <button id="yesButton">Evet</button>
+  <button id="noButton">Hayır</button>
+
+  <div id="message"></div>
+
+  <script>
+    const yesButton = document.getElementById("yesButton");
+    const noButton = document.getElementById("noButton");
+    const message = document.getElementById("message");
+
+    yesButton.onclick = function () {
+      message.innerText = "ZEHRAM ÖZÜR DİLERİM AŞKIM ❤️";
+    };
+
+    noButton.onmouseover = function () {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      noButton.style.left = x + "px";
+      noButton.style.top = y + "px";
+    };
+  </script>
+
+</body>
+</html>
